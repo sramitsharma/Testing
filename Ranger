@@ -1,0 +1,21 @@
+The Full Open Source Landscape
+Row/Column Security Frameworks
+│
+├── 1. Apache Ranger          ← Most complete. Enterprise grade.
+├── 2. Apache Atlas           ← Metadata + classification (works with Ranger)
+├── 3. Open Policy Agent      ← Policy-as-code, engine agnostic
+├── 4. Iceberg Views          ← Native, no extra infra, but static
+├── 5. Trino Built-in         ← Engine-native, Trino only
+├── 6. dbt Column Masking     ← Transform-time masking, dbt only
+└── 7. Privacera              ← Ranger-based, unified (open core)
+
+
+ Apache Atlas
+Atlas is not a security enforcement framework by itself — it's a metadata and classification engine. But it becomes powerful when paired with Ranger.
+What Atlas Does
+Atlas Responsibility
+│
+├── Data Classification     → tag columns as PCI, PII, GDPR, SENSITIVE
+├── Data Lineage            → track where data came from and flows to
+├── Business Glossary       → business definitions of terms
+└── Entity Registry      
